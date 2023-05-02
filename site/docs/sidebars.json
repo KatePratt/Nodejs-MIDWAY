@@ -1,0 +1,331 @@
+{
+  "common": [
+    {
+      "type": "category",
+      "label": "新手指南",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "intro",
+        "quick_guide",
+        "upgrade_v3"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "基础",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "quickstart",
+        "controller",
+        "middleware",
+        "req_res_app",
+        "service",
+        "error_filter",
+        "pipe",
+        "guard",
+        "midway_component",
+        "deployment"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "进阶",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "container",
+        "testing",
+        "mock",
+        "debugger",
+        "environment",
+        "env_config",
+        "lifecycle",
+        "logger",
+        "cookie_session",
+        "built_in_service",
+        "router_table",
+        "decorator_index",
+        "error_code"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "设计模式",
+      "items": [
+        "aspect",
+        "auto_run",
+        "pipeline",
+        "service_factory",
+        "data_listener",
+        "data_source",
+        "retry"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "自定义",
+      "items": [
+        "context_definition",
+        "component_development",
+        "custom_decorator",
+        "custom_error",
+        "change_start_dir"
+      ]
+    }
+  ],
+  "component": [
+    {
+      "type": "category",
+      "label": "通用",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/axios",
+        "extensions/i18n",
+        "extensions/info",
+        "extensions/validate",
+        "extensions/swagger",
+        "extensions/bull",
+        "extensions/cron",
+        "extensions/jwt"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Http 服务",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/koa",
+        "extensions/egg",
+        "extensions/express",
+        "extensions/security",
+        "extensions/render",
+        "extensions/upload",
+        "extensions/passport",
+        "extensions/casbin",
+        "extensions/static_file",
+        "extensions/cross_domain",
+        "extensions/http-proxy",
+        "extensions/captcha"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "数据存储",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/orm",
+        "extensions/sequelize",
+        "extensions/redis",
+        "extensions/mongodb",
+        "extensions/cache",
+        "extensions/oss",
+        "extensions/cos",
+        "extensions/tablestore",
+        "extensions/mikro",
+        "extensions/tags"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "微服务",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/grpc",
+        "extensions/consul",
+        "extensions/etcd"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "WebSocket",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/socketio",
+        "extensions/ws"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "消息",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/rabbitmq",
+        "extensions/kafka"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "运维",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "extensions/otel",
+        "extensions/code_dye",
+        "extensions/pm2",
+        "extensions/cfork",
+        "extensions/alinode",
+        "extensions/prometheus"
+      ]
+    }
+  ],
+  "serverless": [
+    {
+      "type": "doc",
+      "id": "serverless/serverless_intro",
+      "label": "介绍"
+    },
+    {
+      "type": "doc",
+      "id": "serverless/serverless_v2_upgrade_serverless_v3"
+    },
+    {
+      "type": "category",
+      "label": "基础",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "serverless/serverless_dev",
+        "serverless/serverless_testing",
+        "serverless/serverless_context",
+        "serverless/serverless_yml",
+        "serverless/serverless_environment",
+        "serverless/serverless_error"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "平台触发器",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "serverless/aliyun_faas",
+        "serverless/tencent_faas"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "应用部署到弹性容器",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "serverless/app_deploy_serverless",
+        "serverless/migrate_midway",
+        "serverless/migrate_static",
+        "serverless/migrate_koa",
+        "serverless/migrate_express",
+        "serverless/migrate_egg"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "serverless/serverless_post_difference",
+      "label": "Serverless 触发器 POST 情况差异"
+    }
+  ],
+  "hooks": [
+    {
+      "type": "doc",
+      "id": "hooks/intro",
+      "label": "介绍"
+    },
+    {
+      "type": "category",
+      "label": "基础功能",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "hooks/api",
+        "hooks/builtin-hooks",
+        "hooks/validate",
+        "hooks/middleware",
+        "hooks/cors",
+        "hooks/component",
+        "hooks/prisma",
+        "hooks/test",
+        "hooks/config",
+        "hooks/file-route",
+        "hooks/safe",
+        "hooks/upload"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "一体化",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "hooks/fullstack",
+        "hooks/client"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "进阶",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "hooks/deploy"
+      ]
+    }
+  ],
+  "other": [
+    {
+      "type": "category",
+      "label": "工具",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "tool/cli",
+        "tool/mwts",
+        "tool/luckyeye",
+        "tool/typeorm_generator",
+        "tool/sequelize_generator",
+        "tool/egg-ts-helper"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "运维",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "ops/ecs_start_err"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "常见问题",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "how_to_update_midway",
+        "faq/framework_problem",
+        "faq/git_problem",
+        "faq/npm_problem",
+        "faq/ts_problem",
+        "faq/alias_path",
+        "how_to_install_nodejs",
+        "midway_slow_problem"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "其他",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        "release_schedule",
+        "contributing",
+        "awesome_midway"
+      ]
+    }
+  ]
+}

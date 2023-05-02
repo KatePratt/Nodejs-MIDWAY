@@ -1,0 +1,36 @@
+import {
+  PassportStrategy, CustomStrategy,
+} from '../../../../src';
+import { Strategy, ExtractJwt } from 'passport-jwt';
+import { Config } from '@midwayjs/core';
+
+@CustomStrategy()
+export class JwtStrategy extends PassportStrategy(
+  Strategy,
+  'jwt'
+) {
+  @Config('jwt')
+  jwtConfig;
+
+  async validate(payload) {
+    return payload;
+  }
+
+  getStrategyOptions(): any {
+    return {
+      secretOrKey: this.jwtConfig.secret,
+      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    };
+  }
+
+  serializeUser(user, done) {
+    done(null, user);
+  }
+
+  deserializeUser(id, done) {
+    done(null, {
+      username: 'admin',
+      password: '123'
+    });
+  }
+}

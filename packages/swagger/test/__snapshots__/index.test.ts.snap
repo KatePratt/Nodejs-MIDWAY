@@ -1,0 +1,549 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/test/index.test.ts should fix issue1976 1`] = `
+{
+  "components": {
+    "schemas": {
+      "CodeLoginDTO": {
+        "properties": {
+          "code": {
+            "description": "验证码",
+            "example": "0000",
+            "type": "string",
+          },
+          "phone": {
+            "description": "11位手机号码",
+            "example": "17755556666",
+            "type": "string",
+          },
+          "site": {
+            "description": "产品线",
+            "enum": [
+              "sport",
+              "question",
+            ],
+            "type": "string",
+          },
+          "uuid": {
+            "description": "随机数",
+            "example": "xxxx",
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+      "LoginDTO": {
+        "properties": {
+          "password": {
+            "description": "密码",
+            "example": "xxx",
+            "type": "string",
+          },
+          "phone": {
+            "description": "11位手机号码",
+            "example": "17755556666",
+            "type": "string",
+          },
+          "site": {
+            "description": "产品线",
+            "enum": [
+              "sport",
+              "question",
+            ],
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+    },
+  },
+  "info": {
+    "contact": {},
+    "description": "This is a swagger-ui for midwayjs project",
+    "title": "My Project",
+    "version": "1.0.0",
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/cats/login": {
+      "post": {
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO",
+              },
+            },
+          },
+          "description": "",
+          "required": true,
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+          },
+        },
+        "summary": "手机号密码登录",
+        "tags": [
+          "cats",
+        ],
+      },
+    },
+    "/cats/smsLogin": {
+      "post": {
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeLoginDTO",
+              },
+            },
+          },
+          "description": "",
+          "required": true,
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+          },
+        },
+        "summary": "验证码密码登录",
+        "tags": [
+          "cats",
+        ],
+      },
+    },
+  },
+  "servers": [],
+  "tags": [
+    {
+      "description": "cats",
+      "name": "cats",
+    },
+  ],
+}
+`;
+
+exports[`/test/index.test.ts should fix issue2603 1`] = `
+{
+  "components": {
+    "schemas": {
+      "RoleVO": {
+        "properties": {
+          "roleId": {
+            "type": "number",
+          },
+          "users": {
+            "items": {
+              "$ref": "#/components/schemas/UserVO",
+            },
+            "type": "array",
+          },
+        },
+        "type": "object",
+      },
+      "UserVO": {
+        "properties": {
+          "roles": {
+            "items": {
+              "$ref": "#/components/schemas/RoleVO",
+            },
+            "type": "array",
+          },
+          "userId": {
+            "type": "number",
+          },
+        },
+        "type": "object",
+      },
+    },
+  },
+  "info": {
+    "contact": {},
+    "description": "This is a swagger-ui for midwayjs project",
+    "title": "My Project",
+    "version": "1.0.0",
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/api/get_role": {
+      "get": {
+        "parameters": [],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleVO",
+                },
+              },
+            },
+            "description": "",
+          },
+        },
+        "tags": [
+          "api",
+        ],
+      },
+    },
+    "/api/get_user": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "uid",
+            "required": false,
+            "schema": {
+              "type": "number",
+            },
+          },
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserVO",
+                },
+              },
+            },
+            "description": "",
+          },
+        },
+        "tags": [
+          "api",
+        ],
+      },
+    },
+  },
+  "servers": [],
+  "tags": [
+    {
+      "description": "api",
+      "name": "api",
+    },
+  ],
+}
+`;
+
+exports[`/test/index.test.ts test swagger should get swagger json 1`] = `
+{
+  "properties": {
+    "agedt": {
+      "description": "The age of ttthe Cat",
+      "example": 1,
+      "type": "number",
+    },
+    "breedtd": {
+      "description": "The breed tttof the Cat",
+      "example": "Maine Coon",
+      "type": "string",
+    },
+    "namedt": {
+      "description": "The name of the Cat",
+      "example": "Kitty",
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/index.test.ts test swagger should get swagger json 2`] = `
+{
+  "properties": {
+    "aged": {
+      "description": "The age of the Cat",
+      "example": 1,
+      "type": "number",
+    },
+    "breedd": {
+      "description": "The breed of the Cat",
+      "example": "Maine Coon",
+      "type": "string",
+    },
+    "named": {
+      "description": "The name of the Cat",
+      "example": "Kitty",
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/index.test.ts test swagger should get swagger json 3`] = `
+{
+  "properties": {
+    "agea": {
+      "description": "The age of thaae Cat",
+      "example": 1,
+      "type": "number",
+    },
+    "breeda": {
+      "description": "The breed of taahe Cat",
+      "example": "Maine Coon",
+      "type": "string",
+    },
+    "catdsa": {
+      "description": "The breed of the Cat",
+      "items": {
+        "$ref": "#/components/schemas/Catd",
+      },
+      "type": "array",
+    },
+    "namea": {
+      "description": "The name aaof the Cat",
+      "example": "Kitty",
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/index.test.ts test swagger should get swagger json 4`] = `
+{
+  "properties": {
+    "age": {
+      "description": "The age of the Cat",
+      "example": 1,
+      "type": "number",
+    },
+    "agedata": {
+      "description": "The age of the CatDSate",
+      "example": "2022-12-12 11:11:11",
+      "format": "date",
+      "type": "string",
+    },
+    "breed": {
+      "description": "The breed of the Cat",
+      "example": "Maine Coon",
+      "type": "string",
+    },
+    "catds": {
+      "description": "The breed of the Cat",
+      "items": {
+        "$ref": "#/components/schemas/Catd",
+      },
+      "type": "array",
+    },
+    "name": {
+      "description": "The name of the Cat",
+      "example": "Kitty",
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/index.test.ts test swagger should get swagger json 5`] = `
+{
+  "properties": {
+    "age": {
+      "description": "The name of the Catage",
+      "example": "1",
+      "maxItems": 1,
+      "maxLength": 1,
+      "maxProperties": 2,
+      "maximum": 10,
+      "type": "number",
+    },
+    "agedata": {
+      "description": "The age of the CatDSate",
+      "example": "2022-12-12 11:11:11",
+      "format": "date",
+      "type": "string",
+    },
+    "breed": {
+      "description": "The name of the Catbreed",
+      "example": "bbbb",
+      "type": "string",
+    },
+    "breeds": {
+      "description": "The name of the Catage",
+      "example": [
+        "1",
+      ],
+      "items": {
+        "type": "string",
+      },
+      "nullable": true,
+      "type": "array",
+      "uniqueItems": true,
+    },
+    "hello": {
+      "enum": [
+        "One",
+        "Two",
+        "Three",
+      ],
+      "type": "string",
+    },
+    "name": {
+      "description": "The name of the Catname",
+      "example": "Kitty",
+      "format": "binary",
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/index.test.ts test swagger should get swagger json 6`] = `
+{
+  "get": {
+    "parameters": [
+      {
+        "in": "header",
+        "name": "x-test-one",
+        "schema": {
+          "type": "string",
+        },
+      },
+      {
+        "allowEmptyValue": false,
+        "explode": true,
+        "in": "query",
+        "name": "aa",
+        "required": true,
+        "schema": {
+          "enum": [
+            "One",
+            "Two",
+            "Three",
+          ],
+          "type": "string",
+        },
+        "style": "form",
+      },
+      {
+        "allowEmptyValue": false,
+        "explode": true,
+        "in": "query",
+        "name": "test",
+        "required": true,
+        "schema": {
+          "enum": [
+            "One",
+            "Two",
+            "Three",
+          ],
+          "type": "string",
+        },
+        "style": "form",
+      },
+      {
+        "description": "hello world id number",
+        "example": 12,
+        "explode": false,
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {
+          "type": "string",
+        },
+        "style": "simple",
+      },
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Cat",
+            },
+          },
+        },
+        "description": "The found record",
+      },
+    },
+    "security": [
+      {
+        "ttt": [],
+      },
+      {
+        "bbb": [],
+      },
+    ],
+    "tags": [
+      "2-国家测试",
+      "sss",
+    ],
+    "x-hello": {
+      "hello": "world",
+    },
+  },
+  "post": {
+    "parameters": [
+      {
+        "in": "header",
+        "name": "x-test-one",
+        "schema": {
+          "type": "string",
+        },
+      },
+      {
+        "description": "hello world id number",
+        "example": 12,
+        "explode": false,
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {
+          "format": "int32",
+          "type": "number",
+        },
+        "style": "simple",
+      },
+    ],
+    "requestBody": {
+      "content": {
+        "application/octet-stream": {
+          "schema": {
+            "format": "binary",
+            "type": "string",
+          },
+        },
+      },
+      "description": "hello world",
+      "required": true,
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Cat",
+            },
+          },
+        },
+        "description": "成功了",
+      },
+      "403": {
+        "description": "Forbidden.",
+      },
+      "404": {
+        "description": "NotFound.",
+      },
+    },
+    "security": [
+      {
+        "ttt": [],
+      },
+      {
+        "bbb": [],
+      },
+    ],
+    "summary": "Create cat",
+    "tags": [
+      "2-国家测试",
+      "sss",
+    ],
+  },
+}
+`;

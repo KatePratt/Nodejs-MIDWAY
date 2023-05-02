@@ -1,0 +1,45 @@
+{
+  "name": "@midwayjs/grpc",
+  "version": "3.11.6",
+  "description": "Midway Framework for gRPC",
+  "main": "dist/index",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --require=ts-node/register ../../node_modules/.bin/jest --runInBand",
+    "cov": "node --require=ts-node/register ../../node_modules/.bin/jest --runInBand --coverage --forceExit",
+    "ci": "npm run test"
+  },
+  "keywords": [
+    "midway",
+    "IoC",
+    "web",
+    "scene",
+    "grpc"
+  ],
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@midwayjs/mock": "^3.11.6",
+    "fs-extra": "10.1.0"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "1.8.14",
+    "@grpc/proto-loader": "0.7.6",
+    "@midwayjs/core": "^3.11.6",
+    "@midwayjs/logger": "^2.15.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "Harry Chen <czy88840616@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midwayjs/midway.git"
+  },
+  "gitHead": "a603d2348d6141f8f723901498f03a162a037708"
+}

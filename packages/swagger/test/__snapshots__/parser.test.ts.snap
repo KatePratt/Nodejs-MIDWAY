@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/test/parser.test.ts should fix issue#2286 with array example 1`] = `
+{
+  "components": {
+    "schemas": {
+      "Cat": {
+        "properties": {
+          "catds": {
+            "description": "The breed of the Cat",
+            "items": {
+              "$ref": "#/components/schemas/Catd",
+            },
+            "type": "array",
+          },
+          "name": {
+            "description": "The name of the Cat",
+            "example": "Kitty",
+            "format": undefined,
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+      "Catd": {
+        "properties": {
+          "aged": {
+            "description": "The age of the Cat",
+            "example": 1,
+            "format": undefined,
+            "type": "number",
+          },
+          "breedd": {
+            "description": "The breed of the Cat",
+            "example": "Maine Coon",
+            "format": undefined,
+            "type": "string",
+          },
+          "named": {
+            "description": "The name of the Cat",
+            "example": "Kitty",
+            "format": undefined,
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+    },
+  },
+  "info": {
+    "contact": {},
+    "description": "",
+    "title": "",
+    "version": "1.0.0",
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/api/update_user": {
+      "post": {
+        "description": undefined,
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cat",
+                },
+              },
+            },
+            "description": "The found record",
+          },
+        },
+        "summary": undefined,
+        "tags": [
+          "api",
+        ],
+      },
+    },
+  },
+  "servers": [],
+  "tags": [
+    {
+      "description": "api",
+      "externalDocs": undefined,
+      "name": "api",
+    },
+  ],
+}
+`;
+
+exports[`/test/parser.test.ts should parse base type 1`] = `
+{
+  "properties": {
+    "breeds": {
+      "description": "The name of the Catage",
+      "example": [
+        "1",
+      ],
+      "items": {
+        "type": "string",
+      },
+      "nullable": true,
+      "type": "array",
+      "uniqueItems": true,
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/parser.test.ts should parse ref schema with function 1`] = `
+{
+  "properties": {
+    "albums": {
+      "items": {
+        "$ref": "#/components/schemas/Album",
+      },
+      "type": "array",
+    },
+    "id": {
+      "format": undefined,
+      "type": "number",
+    },
+    "name": {
+      "format": undefined,
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/parser.test.ts should parse ref schema with function 2`] = `
+{
+  "properties": {
+    "id": {
+      "format": undefined,
+      "type": "number",
+    },
+    "name": {
+      "format": undefined,
+      "type": "string",
+    },
+    "photos": {
+      "items": {
+        "$ref": "#/components/schemas/Photo",
+      },
+      "type": "array",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/parser.test.ts should parse type with function 1`] = `
+{
+  "properties": {
+    "album": {
+      "$ref": "#/components/schemas/Album",
+    },
+    "id": {
+      "format": undefined,
+      "type": "number",
+    },
+    "name": {
+      "format": undefined,
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/parser.test.ts should parse type with function 2`] = `
+{
+  "properties": {
+    "id": {
+      "format": undefined,
+      "type": "number",
+    },
+    "name": {
+      "format": undefined,
+      "type": "string",
+    },
+    "photo": {
+      "$ref": "#/components/schemas/Photo",
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/parser.test.ts should test multi-type in property 1`] = `
+{
+  "properties": {
+    "album": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Album",
+        },
+        {
+          "items": {
+            "$ref": "#/components/schemas/Album",
+          },
+          "type": "array",
+        },
+      ],
+    },
+    "name": {
+      "oneOf": [
+        {
+          "format": undefined,
+          "type": "string",
+        },
+        {
+          "items": {
+            "type": "string",
+          },
+          "type": "array",
+        },
+      ],
+    },
+  },
+  "type": "object",
+}
+`;
+
+exports[`/test/parser.test.ts should test ref path generate 1`] = `
+{
+  "components": {
+    "schemas": {
+      "NotificationDTO": {
+        "properties": {
+          "id": {
+            "description": "这是 id",
+            "example": "1",
+            "format": undefined,
+            "type": "number",
+          },
+          "title": {
+            "description": "title",
+            "example": "通知标题",
+            "format": undefined,
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+      "NotificationPageListDTO": {
+        "properties": {
+          "count": {
+            "description": "通知数量",
+            "example": "999",
+            "format": undefined,
+            "type": "number",
+          },
+          "rows": {
+            "description": "列表数据",
+            "items": {
+              "$ref": "#/components/schemas/NotificationDTO",
+            },
+            "type": "array",
+          },
+        },
+        "type": "object",
+      },
+      "UserDTO": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/NotificationPageListDTO",
+            "description": "The uid of the user",
+          },
+          "name": {
+            "description": "The name of the user",
+            "example": "Kitty",
+            "format": undefined,
+            "type": "string",
+          },
+          "uid": {
+            "description": "The uid of the user",
+            "example": "1",
+            "format": undefined,
+            "type": "number",
+          },
+        },
+        "type": "object",
+      },
+    },
+  },
+  "info": {
+    "contact": {},
+    "description": "",
+    "title": "",
+    "version": "1.0.0",
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/api/update_user": {
+      "post": {
+        "description": undefined,
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDTO",
+                },
+              },
+            },
+            "description": "The found record",
+          },
+        },
+        "summary": undefined,
+        "tags": [
+          "api",
+        ],
+      },
+    },
+  },
+  "servers": [],
+  "tags": [
+    {
+      "description": "api",
+      "externalDocs": undefined,
+      "name": "api",
+    },
+  ],
+}
+`;
+
+exports[`/test/parser.test.ts should test simple case with example 1`] = `
+{
+  "components": {
+    "schemas": {
+      "Cat": {
+        "properties": {
+          "name": {
+            "description": "The name of the Cat",
+            "example": "Kitty",
+            "format": undefined,
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+    },
+  },
+  "info": {
+    "contact": {},
+    "description": "",
+    "title": "",
+    "version": "1.0.0",
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/api/update_user": {
+      "post": {
+        "description": undefined,
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cat",
+                },
+              },
+            },
+            "description": "The found record",
+          },
+        },
+        "summary": undefined,
+        "tags": [
+          "api",
+        ],
+      },
+    },
+  },
+  "servers": [],
+  "tags": [
+    {
+      "description": "api",
+      "externalDocs": undefined,
+      "name": "api",
+    },
+  ],
+}
+`;
+
+exports[`/test/parser.test.ts should test specify type 1`] = `
+{
+  "properties": {
+    "id": {
+      "format": undefined,
+      "type": "string",
+    },
+  },
+  "type": "object",
+}
+`;

@@ -1,0 +1,33 @@
+{
+  "name": "@midwayjs/fc-starter",
+  "version": "3.11.6",
+  "main": "dist/index",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@midwayjs/async-hooks-context-manager": "^3.11.6",
+    "@midwayjs/faas": "^3.11.6",
+    "raw-body": "2.5.2"
+  },
+  "devDependencies": {
+    "@midwayjs/core": "^3.11.6",
+    "@midwayjs/serverless-http-parser": "^3.10.14"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --require=ts-node/register ../../node_modules/.bin/jest --runInBand",
+    "cov": "node --require=ts-node/register ../../node_modules/.bin/jest --runInBand --coverage --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:midwayjs/midway.git"
+  },
+  "license": "MIT",
+  "gitHead": "1afeb34cbb6c0ad49ccdb9cfaebd254ae73afc6a"
+}

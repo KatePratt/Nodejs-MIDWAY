@@ -1,0 +1,49 @@
+{
+  "name": "@midwayjs/express",
+  "version": "3.11.6",
+  "description": "Midway Web Framework for Express",
+  "main": "dist/index",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --require=ts-node/register ../../node_modules/.bin/jest --runInBand",
+    "cov": "node --require=ts-node/register ../../node_modules/.bin/jest --runInBand --coverage --forceExit",
+    "ci": "npm run test"
+  },
+  "keywords": [
+    "midway",
+    "IoC",
+    "web",
+    "scene",
+    "express"
+  ],
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@midwayjs/logger": "^2.15.0",
+    "@midwayjs/mock": "^3.11.6",
+    "@types/body-parser": "1.19.2",
+    "@types/express": "4.17.17",
+    "fs-extra": "10.1.0"
+  },
+  "dependencies": {
+    "@midwayjs/core": "^3.11.6",
+    "@midwayjs/express-session": "^3.11.6",
+    "body-parser": "1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "4.18.2"
+  },
+  "author": "Harry Chen <czy88840616@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midwayjs/midway.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "gitHead": "a603d2348d6141f8f723901498f03a162a037708"
+}

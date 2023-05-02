@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "Midway 3 with request context",
+      "cwd": "fixtures/midway-request-scope",
+      "command": "npm run start",
+      "port": 7001,
+      "url": "/",
+      "skip": false
+    },
+    {
+      "name": "Midway 3 with async hooks",
+      "cwd": "fixtures/midway-request-scope",
+      "command": "npm run start",
+      "port": 7001,
+      "url": "/",
+      "skip": false
+    }
+  ]
+}

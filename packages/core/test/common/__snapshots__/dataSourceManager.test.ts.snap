@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test/common/dataSourceManager.test.ts should test base data source 1`] = `
+{
+  "dialect": "mysql",
+  "entities": [
+    [Function],
+    [Function],
+  ],
+  "entitiesLength": 2,
+  "host": "localhost",
+  "pool": {
+    "idle": 10000,
+    "max": 5,
+    "min": 0,
+  },
+  "port": "3306",
+}
+`;
+
+exports[`test/common/dataSourceManager.test.ts should test base data source 2`] = `
+{
+  "dataSourceGroup": "bb",
+  "dialect": "mysql",
+  "entities": [
+    [Function],
+  ],
+  "entitiesLength": 1,
+  "host": "localhost",
+  "pool": {
+    "idle": 10000,
+    "max": 5,
+    "min": 0,
+  },
+  "port": "3306",
+}
+`;
+
+exports[`test/common/dataSourceManager.test.ts should test with glob model 1`] = `
+{
+  "dialect": "mysql",
+  "entities": [
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+  ],
+  "entitiesLength": 7,
+  "host": "localhost",
+  "pool": {
+    "idle": 10000,
+    "max": 5,
+    "min": 0,
+  },
+  "port": "3306",
+}
+`;
